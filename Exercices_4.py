@@ -60,7 +60,12 @@ def fact(nb):
         fact_nb *= cpt_nb
     return fact_nb
 
-#6 Factorielle avec fonction récurrente
+#6 Factorielle avec fonction récursive
+def fact_rec(nb_rec):
+    if nb_rec == 0:
+        return 1
+    else:
+        return nb_rec * fact_rec(nb_rec - 1)
 
 
 #7 Fonction à nombre variable d'arguments
@@ -89,26 +94,26 @@ def count_first_digits(my_list):
 
 # ============ Fin déclaration des fonctions  ================
 
-print("\nExercice 1 : ")
+print("\nExercice 1 : Multiplication par 5 ")
 user_nb = float(input("Entrer un nombre : "))
 print(multiplication_5(user_nb))
 
 input("\nAppuyer sur une touche passer à l'exercice 2")
 
-print("\nExercice 2 : ")
+print("\nExercice 2 : Extraction nombres pairs ")
 ma_liste = [1, 2, 5, 6, 12, 37, 50, 72, 43]
 print("Liste complète :", ma_liste)
 print("Nombres pairs de la liste :", extract_even_nb(ma_liste))
 
 input("\nAppuyer sur une touche passer à l'exercice 3")
 
-print("\nExercice 3 : ")
+print("\nExercice 3 : Suite de Fibonacci ")
 nb_max = int(input("Entrée un entier strictement positif : "))
 fibonacci_suite(nb_max)
 
 input("\nAppuyer sur une touche passer à l'exercice 4")
 
-print("\nExercice 4 : ")
+print("\nExercice 4 : Extraction de voyelles de 3 façons différentes")
 chaine_test = "Bienvenue en Occitanie"
 print("Chaîne de caractères :", chaine_test)
 print("Méthode FOR :", nb_voyelles_for(chaine_test), "voyelles")
@@ -117,18 +122,24 @@ print("Méthode avec STRING :", nb_voyelles_str(chaine_test), "voyelles")
 
 input("\nAppuyer sur une touche passer à l'exercice 5")
 
-print("\nExercice 5 : ")
+print("\nExercice 5 : Calcul de factorielle ")
 user_nb = int(input("Entrée un entier strictement positif : "))
 print("Factorielle", user_nb, "=", fact(user_nb))
 
+input("\nAppuyer sur une touche passer à l'exercice 6")
+
+print("\nExercice 6 : Calcul de factorielle par fonction récursive ")
+user_nb_rec = int(input("Entrée un entier strictement positif : "))
+print("Calcul récursif : Factorielle", user_nb_rec, "=", fact_rec(user_nb_rec))
+
 input("\nAppuyer sur une touche passer à l'exercice 7")
 
-print("\nExercice 7 : ")
+print("\nExercice 7 : calcul somme des arguments dont le nombre est variable ")
 print("liste des valeurs : 1, 5, 12, 22")
 somme_arg(1, 5, 12, 22)
 
 input("\nAppuyer sur une touche passer à l'exercice 8")
 
-print("\nExercice 8 : ")
+print("\nExercice 8 : compter le nombre de premiers caracteres dans une liste ")
 liste_demo = [1, 4 ,9 ,16 ,25 ,36 ,49 ,64 ,100 ,121]
 print(count_first_digits(liste_demo))
